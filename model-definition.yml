@@ -1,0 +1,22 @@
+kind: Model
+apiVersion: v1alpha3
+metadata:
+  displayName: SHETran v1
+  type: Modelling
+  name: shetran
+  summary: SHETran is a physically-based spatially-distributed hydrological model.
+  description: >
+    SHETran is a model for water flow, solute and sediment transport in river catchments.
+    SHETran is a finite-difference model in which the physics-based governing partial differential equations for flow and transport are solved on a three-dimensional grid.
+    SHETran is a physically-based, spatially-distributed (PBSD) modelling system.
+    The plan area of the catchment in SHETran is usually in the range of one to a few thousand square kilometers and the horizontal depth of the subsurface is usually less than 100m.
+spec:
+  inputs:
+    env:
+      - name: DURATION
+        title: Run duration (days)
+        desc: The number of days to run the simulation for
+        type: number
+        default: 5
+        min: 1
+        max: 61
