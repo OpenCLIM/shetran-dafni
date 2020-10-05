@@ -1,7 +1,7 @@
 kind: Model
 apiVersion: v1alpha3
 metadata:
-  displayName: SHETran v1
+  displayName: SHETran v2
   type: Modelling
   name: shetran
   summary: SHETran is a physically-based spatially-distributed hydrological model.

@@ -1,0 +1,58 @@
+<?xml version=1.0?><ShetranInput>
+<ProjectFile>Aire_at_Kildwick_BridgeProjectFile</ProjectFile>
+<CatchmentName>Aire_at_Kildwick_Bridge</CatchmentName>
+<DEMMeanFileName>demAsciiAire_at_Kildwick_Bridge.txt</DEMMeanFileName> This is used to caculate the elevations of the grid squares
+<DEMminFileName>minDemAsciiAire_at_Kildwick_Bridge.txt</DEMMinFileName> This is used to caculate the location and elevations of the river channels. If it is not avilable the mean dem
+<MaskFileName>maskAsciiAire_at_Kildwick_Bridge.txt</MaskFileName>
+<VegMap>LandCoverAsciiAire_at_Kildwick_Bridge.txt</VegMap> Vegetation / land-use map. The number of categories must correspond to those in Vegetation details
+<SoilMap>soilAsciiAire_at_Kildwick_Bridge.txt</SoilMap> Soil category map. the number of categories must correspond to those in Soil details
+<LakeMap>lakeAsciiAire_at_Kildwick_Bridge.txt</LakeMap>  No lakes
+<PrecipMap>RainAsciiAire_at_Kildwick_Bridge.txt</PrecipMap> Spatial distibution of precipitation stations
+<PeMap>PEAsciiAire_at_Kildwick_Bridge.txt</PeMap> Spatial distibution of PE stations
+<VegetationDetails><VegetationDetail>Veg Type #, Vegetation Type, Canopy storage capacity (mm), Leaf area index, Maximum rooting depth(m), AE/PE at field capacity,Strickler overland flow coefficient</VegetationDetail>
+<VegetationDetail>1, Arable, 1.5, 1, 0.8, 0.6, 1.5</VegetationDetail>
+<VegetationDetail>2, BareGround, 0, 0, 0.1, 0.4, 2.0</VegetationDetail>
+<VegetationDetail>3, Grass, 1.5, 1, 1.0, 0.6, 1.0</VegetationDetail>
+<VegetationDetail>4, DeciduousForest, 5, 1, 1.6, 1.0, 0.5</VegetationDetail>
+<VegetationDetail>5, EvergreenForest, 5, 1, 2.0, 1.0, 0.5</VegetationDetail>
+<VegetationDetail>6, Shrub, 1.5, 1, 1.0, 0.4, 1.0</VegetationDetail>
+<VegetationDetail>7, Urban, 0.3, 0.3, 0.5, 0.4, 5.0</VegetationDetail>
+</VegetationDetails>
+<SoilProperties>
+<SoilProperty>Soil Number,Soil Type, Saturated Water Content, Residual Water Content, Saturated Conductivity (m/day), vanGenuchten- alpha (cm-1), vanGenuchten-n</SoilProperty>
+<SoilProperty>1,Coarse(18%:clayAnd:65%sand), 0.403, 0.025, 60.000, 0.0383, 1.3774</SoilProperty>
+<SoilProperty>2,LowProductivityAquiferThroughPores, 0.3, 0.2, 0.001, 0.01, 5</SoilProperty>
+<SoilProperty>3,MediumFine(:35%clayand:15%sand), 0.430, 0.010, 2.272, 0.0083, 1.2539</SoilProperty>
+<SoilProperty>4,HighlyProductiveAquiferThroughCracks, 0.3, 0.2, 41.5, 0.001, 6</SoilProperty>
+</SoilProperties>
+<SoilDetails>
+<SoilDetail>Soil Category, Soil Layer, Soil Type, Depth at base of layer (m)</SoilDetail>
+<SoilDetail>1, 1, 1, 1.0 </SoilDetail>
+<SoilDetail>1, 2, 2, 6.0 </SoilDetail>
+<SoilDetail>2, 1, 1, 1.0 </SoilDetail>
+<SoilDetail>2, 2, 2, 5.0 </SoilDetail>
+<SoilDetail>3, 1, 3, 1.2 </SoilDetail>
+<SoilDetail>3, 2, 4, 6.2 </SoilDetail>
+<SoilDetail>4, 1, 3, 1.2 </SoilDetail>
+<SoilDetail>4, 2, 2, 6.2 </SoilDetail>
+</SoilDetails>
+<InitialConditions>0</InitialConditions> Initial water table depth below ground
+<PrecipitationTimeSeriesData>RainTimeSeriesFactoredAire_at_Kildwick_Bridge.csv</PrecipitationTimeSeriesData> Precipitation time series. Units are in mm in the timestep length in PrecipitationTimeStep. In this case mm/day 
+<PrecipitationTimeStep>24</PrecipitationTimeStep> >  Timestep in hours
+<EvaporationTimeSeriesData>PETimeSeriesAire_at_Kildwick_Bridge.csv</EvaporationTimeSeriesData> PE  time series. Units are in mm in the timestep length in EvaporationTimeStep. In this case mmm/day 
+<EvaporationTimeStep>24</EvaporationTimeStep> >  Timestep in hours
+<StartDay>01</StartDay>
+<StartMonth>01</StartMonth>
+<StartYear>1980</StartYear>
+<EndDay>{day}</EndDay>
+<EndMonth>{month}</EndMonth>
+<EndYear>1980</EndYear>
+<RiverGridSquaresAccumulated>2</RiverGridSquaresAccumulated> Number of upstream grid squares needed to produce a river channel. A larger number will have fewer river channels
+<DropFromGridToChannelDepth>2</DropFromGridToChannelDepth> The standard and minimum value is 2 if there are numerical problems with error 1060 this can be increased
+<MinimumDropBetweenChannels>0.5</MinimumDropBetweenChannels> This depends on the grid size and how steep the catchment is. A value of 1 is a sensible starting point but more gently sloping catchments it can be reduced.
+<RegularTimestep>1.0</RegularTimestep> This is the standard Shetran timestep it is autmatically reduced in rain. The standard value is 1 hour. The maximum allowed value is 2 hours
+<IncreasingTimestep>0.05</IncreasingTimestep> speed of increase in timestep after rainfall back to the standard timestep. The standard value is 0.05. If if there are numerical problems with error 1060 it can be reduced to 0.01 but the simulation will take longer.
+<SimulatedDischargeTimestep>24.0</SimulatedDischargeTimestep> This should be the same as the measured discharge
+</ShetranInput>
+
+
