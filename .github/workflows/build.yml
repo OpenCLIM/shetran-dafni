@@ -14,5 +14,5 @@ jobs:
       - name: build image
         run: docker build -t shetran-dafni .
 
-      - name: test return period
+      - name: test
         run: docker run -v $PWD/data:/data --env PYTHONUNBUFFERED=1 shetran-dafni
