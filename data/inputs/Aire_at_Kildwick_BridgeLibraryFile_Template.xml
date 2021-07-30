@@ -44,8 +44,8 @@
 <StartDay>01</StartDay>
 <StartMonth>01</StartMonth>
 <StartYear>1980</StartYear>
-<EndDay>{day}</EndDay>
-<EndMonth>{month}</EndMonth>
+<EndDay>05</EndDay>
+<EndMonth>01</EndMonth>
 <EndYear>1980</EndYear>
 <RiverGridSquaresAccumulated>2</RiverGridSquaresAccumulated> Number of upstream grid squares needed to produce a river channel. A larger number will have fewer river channels
 <DropFromGridToChannelDepth>2</DropFromGridToChannelDepth> The standard and minimum value is 2 if there are numerical problems with error 1060 this can be increased

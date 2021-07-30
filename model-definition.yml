@@ -12,11 +12,11 @@ metadata:
     The plan area of the catchment in SHETran is usually in the range of one to a few thousand square kilometers and the horizontal depth of the subsurface is usually less than 100m.
 spec:
   inputs:
-    env:
-      - name: DURATION
-        title: Run duration (days)
-        desc: The number of days to run the simulation for
-        type: number
-        default: 5
-        min: 1
-        max: 61
+    dataslots:
+      - name: SHETran input files
+        description: SHETran input files
+        default:
+          - uid: c1f9ec1b-99da-411a-8160-c5f2c48e02de
+            versionUid: f0d1cca7-20d3-4e94-b12d-dbe218b3597e
+        path: inputs/dem
+        required: false

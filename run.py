@@ -1,24 +1,23 @@
 import subprocess
-import os
-from datetime import datetime, timedelta
 import shutil
+from glob import glob
+import os
 
-duration = timedelta(days=int(os.getenv('DURATION', '1')))
-start = datetime(1980, 1, 1)
-end = start + duration
+data_path = os.getenv('DATA_PATH', '/data')
 
-path = 'aire-at-kildwick-bridge'
+inputs = os.path.join(data_path, 'inputs')
+outputs = os.path.join(data_path, 'outputs')
 
-with open(f'{path}/Aire_at_Kildwick_BridgeLibraryFile_Template.xml') as f:
-    text = f.read()
+if os.path.exists(outputs):
+    shutil.rmtree(outputs)
 
-library = f'{path}/Aire_at_Kildwick_BridgeLibraryFile.xml'
-with open(library, 'w') as f:
-    f.write(text.format(month=end.month, day=end.day))
+shutil.copytree(inputs, outputs)
+
+try:
+    library = glob(os.path.join(outputs, '*.xml'))[0]
+except IndexError:
+    raise Exception('Library file missing')
+
 
 subprocess.call(['./shetran-prepare', library])
-subprocess.call(['./shetran-linux', '-f', f'{path}/rundata_Aire_at_Kildwick_Bridge.txt'])
-
-for f in os.listdir(path):
-    if not any([f.endswith('Template.xml'), f.startswith('input'), f.startswith('rundata'), f == 'temporary.txt']):
-        shutil.move(f'{path}/{f}', f'/data/outputs/{f}')
+subprocess.call(['./shetran-linux', '-f', glob(os.path.join(outputs, 'rundata_*'))[0]])
