@@ -5,4 +5,4 @@
 - Runs a SHETran simulation
 
 ## Usage 
-`docker run -v "data:/data" --name shetran-dafni shetran-dafni  `  
+`docker run -v "absolute_path_of_data_directory:/data" --name shetran-dafni shetran-dafni  `  
