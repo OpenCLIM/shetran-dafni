@@ -1,7 +1,7 @@
 kind: Model
-apiVersion: v1alpha3
+apiVersion: v1alpha5
 metadata:
-  displayName: SHETran v2
+  displayName: SHETran
   type: Modelling
   name: shetran
   summary: SHETran is a physically-based spatially-distributed hydrological model.
@@ -16,7 +16,7 @@ spec:
       - name: SHETran input files
         description: SHETran input files
         default:
-          - uid: c1f9ec1b-99da-411a-8160-c5f2c48e02de
-            versionUid: f0d1cca7-20d3-4e94-b12d-dbe218b3597e
-        path: inputs/dem
+          - uid: b6ae4273-4251-4980-ab7c-9fcacd7595af
+            versionUid: bdb42828-e581-4a1d-8a0a-afcd634d4a2a
+        path: inputs
         required: false
