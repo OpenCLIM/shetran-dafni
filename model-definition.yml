@@ -18,3 +18,11 @@ spec:
           - bdb42828-e581-4a1d-8a0a-afcd634d4a2a
         path: inputs
         required: false
+
+    parameters:
+      - name: TITLE
+        title: Title
+        type: string
+        description: The title given to the output dataset
+        default: Shetran output
+        required: false
