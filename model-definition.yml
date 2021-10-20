@@ -1,10 +1,11 @@
 kind: Model
-apiVersion: v1beta1
+api_version: v1beta1
 metadata:
   display_name: SHETran
   name: shetran
   summary: SHETran is a physically-based spatially-distributed hydrological model.
   source_code: https://github.com/OpenCLIM/shetran-dafni
+  publisher: Newcastle University
   description: >
     SHETran is a model for water flow, solute and sediment transport in river catchments.
     SHETran is a finite-difference model in which the physics-based governing partial differential equations for flow and transport are solved on a three-dimensional grid.
