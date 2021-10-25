@@ -28,8 +28,8 @@ subprocess.call(['./shetran-prepare', library])
 subprocess.call(['./shetran-linux', '-f', glob(os.path.join(run_path, 'rundata_*'))[0]])
 
 title = os.getenv('TITLE', 'SHETran output')
-description = ''
-geojson = ''
+description = ' '
+geojson = {}
 
 
 metadata = f"""{{
