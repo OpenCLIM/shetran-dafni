@@ -24,7 +24,7 @@ except IndexError:
     raise Exception('Library file missing')
 
 
-subprocess.call(['./shetran-prepare', library])
+subprocess.call(['./shetran-prepare-snow', library])
 subprocess.call(['./shetran-linux', '-f', glob(os.path.join(run_path, 'rundata_*'))[0]])
 
 title = os.getenv('TITLE', 'SHETran output')
