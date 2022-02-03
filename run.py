@@ -39,7 +39,7 @@ metadata = f"""{{
   "dct:title": "{title}",
   "dct:description": "{description}",
   "dcat:keyword": [
-    "citycat"
+    "shetran"
   ],
   "dct:subject": "Environment",
   "dct:license": {{
